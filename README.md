@@ -42,7 +42,7 @@ L’objectif est de fournir un outil de gestion complet via **SQLite** et **Pyth
 
 Pour voir une démonstration de l’interface du système de gestion d’hôtel, vous pouvez consulter la vidéo ci-dessous :
 
-🔗 **Lien vers la vidéo :** [Cliquez ici pour visionner sur YouTube](https://www.youtube.com/watch?v=TON_LIEN_ICI)  
+🔗 **Lien vers la vidéo :** [Cliquez ici pour visionner sur YouTube](https://www.youtube.com/watch?v=_d8NOQiFnyw&rco=1)  
 
 ----
 
