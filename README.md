@@ -1,171 +1,179 @@
-<div align="center" style="margin: 40px 0;">
+<div align="center">
 
-<table style="border: none; width: 100%; max-width: 1000px; margin: 0 auto;">
+<table style="width: 100%; border: none;">
   <tr>
-    <td style="text-align: center; padding: 30px; border-right: 1px solid #eee; width: 50%;">
-      <img 
-        src="https://raw.githubusercontent.com/ItsHaname/Project_CPP_FSSM/main/assets/fssm.png" 
-        alt="Logo FSSM"
-        style="height: 200px; width: auto; object-fit: contain; display: block; margin: 0 auto;"
-      />
-      <div style="margin-top: 20px; font-family: 'Segoe UI', sans-serif; font-size: 15px; color: #444; line-height: 1.5;">
-        <strong style="font-size: 16px;">Faculté des Sciences Semlalia</strong><br/>
-        Université Cadi Ayyad
-      </div>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/ItsHaname/Project_CPP_FSSM/main/assets/fssm.png" alt="Logo FSSM" height="180">
+      <br/>
+      <strong>Faculté des Sciences Semlalia</strong><br/>
+      Université Cadi Ayyad
     </td>
-    
- <td style="text-align: center; padding: 30px; width: 50%;">
-      <img 
-        src="https://raw.githubusercontent.com/ItsHaname/Project_CPP_FSSM/main/assets/uni.png" 
-        alt="Logo Université"
-        style="height: 180px; width: auto; object-fit: contain; display: block; margin: 0 auto;"
-      />
-      <div style="margin-top: 20px; font-family: 'Segoe UI', sans-serif; font-size: 15px; color: #444; line-height: 1.5;">
-        <strong style="font-size: 16px;">Université Cadi Ayyad</strong><br/>
-        Marrakech, Maroc
-      </div>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/ItsHaname/Project_CPP_FSSM/main/assets/uni.png" alt="Logo Université" height="160">
+      <br/>
+      <strong>Université Cadi Ayyad</strong><br/>
+      Marrakech, Maroc
     </td>
   </tr>
 </table>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=2AF70C&center=true&vCenter=true&width=800&lines=%F0%9F%9A%80+Projet+de+Base+de+Donn%C3%A9es+:+Gestion+d%E2%80%99H%C3%B4tel" alt="Typing SVG" />
 </div>
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=FFFFFF&center=true&vCenter=true&width=800&lines=%F0%9F%9A%80+Rapport+de+Projet+de+Fin+de+Module" alt="Typing SVG" />
-</p>
 
-## Université Cadi Ayyad - Faculté des Sciences Semlalia
+---
 
-#### **Auteurs** :  
-### - Hanane AIT BAH  
-----
-# Project Database - Hotel Management System
+## 🧑‍🎓 Auteur
 
-## Description
+- **Nom :** Hanane AIT BAH  
+- **Encadré à la FSSM - UCA**
 
-Ce projet est une base de données pour un système de gestion d'hôtel. Il permet de gérer les informations des clients, des réservations, des chambres, des hôtels, des prestations et des évaluations. L'objectif est de permettre aux utilisateurs de réserver des chambres, de consulter les détails des réservations et d'effectuer diverses actions liées à la gestion d'un hôtel.
+---
 
-Le projet utilise une base de données SQLite et un ensemble de scripts Python pour effectuer des opérations sur la base de données.
+# 🏨 Système de Gestion d’Hôtel — Base de Données (SQLite + Python)
 
-## Fonctionnalités
+Ce projet implémente une base de données relationnelle pour la gestion d’un hôtel, avec des fonctionnalités permettant la gestion des **clients**, **réservations**, **chambres**, **prestations**, **évaluations**, et **hôtels**.
 
-- **Gestion des Clients** : Ajout, consultation et modification des informations des clients.
-- **Réservations** : Création, modification et consultation des réservations des clients.
-- **Chambres** : Gestion des chambres, y compris la disponibilité et les types de chambres.
-- **Hôtels** : Informations sur les hôtels, y compris leur localisation et les prestations proposées.
-- **Évaluations** : Permet aux clients de laisser des évaluations sur leur séjour.
-- **Prestations** : Ajout et gestion des prestations offertes par les hôtels.
+L’objectif est de fournir un outil de gestion complet via **SQLite** et **Python** avec des scripts SQL d’initialisation, insertion et interrogation.
 
-## Prérequis
+---
 
-Avant de commencer à utiliser ce projet, vous devez avoir installé les éléments suivants :
+## ⚙️ Fonctionnalités
 
-- **Python 3.x** : Le projet utilise Python pour l'interaction avec la base de données.
-- **SQLite** : Le projet utilise SQLite pour la gestion de la base de données.
-- **Virtualenv** (optionnel mais recommandé) : Un environnement virtuel pour gérer les dépendances Python.
+- 👤 Gestion des clients (ajout, affichage, modification)
+- 🛏️ Gestion des chambres par type et disponibilité
+- 📝 Réservations : ajout, affichage par date/client
+- 🧼 Gestion des prestations hôtelières
+- 🌍 Gestion de plusieurs hôtels (multi-sites)
+- ⭐ Évaluations des séjours par les clients
 
-### Installation des dépendances
+---
 
-1. **Cloner le repository** :
+## 🧩 Technologies utilisées
+
+| Technologie | Utilisation |
+|------------|-------------|
+| `SQLite`   | Base de données relationnelle |
+| `Python 3.x` | Scripts de gestion et requêtes |
+| `SQL` | Création de schéma, insertion, requêtes |
+| `Virtualenv` | Environnement virtuel Python |
+| `pytest` | Tests unitaires |
+
+---
+
+## 📁 Structure du projet
 
 ```bash
+project_database/
+│
+├── data/
+│   ├── create_schema.sql     # Création des tables
+│   ├── insert_data.sql       # Données d'exemple
+│   ├── hotel_db.sqlite       # Fichier SQLite de la base
+│   └── queries.sql           # Requêtes SQL personnalisées
+│
+├── src/
+│   ├── db_operations.py      # Fonctions Python de gestion de la DB
+│   └── main.py               # Script principal pour tests
+│
+├── tests/
+│   └── test_db_operations.py # Tests unitaires avec pytest
+│
+├── requirements.txt          # Dépendances de production
+├── requirements-dev.txt      # Dépendances pour développement/test
+├── setup.py                  # Setup projet (optionnel)
+└── README.md                 # Ce fichier
+```
+ 🚀 Installation étape par étape
+   1. Cloner le projet     
+   ```
 git clone https://github.com/ItsHaname/project_database.git
 cd project_database
 ```
-Créer et activer un environnement virtuel :
-
-Si tu n'as pas virtualenv installé, installe-le d'abord :
-
+  2. Créer un environnement virtuel
+````
 pip install virtualenv
+virtualenv env
+source env/bin/activate  # Linux / Mac
+env\Scripts\activate     # Windows
 
-Ensuite, crée et active l'environnement virtuel :
 
-    virtualenv env
-    source env/bin/activate  # Sur Linux/Mac
-    env\Scripts\activate     # Sur Windows
-
-    Installer les dépendances :
-
+````
+ 3. Installer les dépendances
+```
 pip install -r requirements.txt
+```
+🏗️ Initialiser la base de données
 
-Structure du projet
 
-Voici la structure des fichiers du projet :
-
-project_database/
-│
-├── data/                  # Contient les fichiers de la base de données et les scripts SQL
-│   ├── create_schema.sql  # Script pour créer la structure de la base de données
-│   ├── hotel_db.sqlite    # Fichier de la base de données SQLite
-│   ├── insert_data.sql    # Script pour insérer des données dans la base de données
-│   └── queries.sql        # Script pour effectuer des requêtes SQL personnalisées
-│
-├── env/                   # Environnement virtuel
-│
-├── src/                   # Code source du projet
-│   ├── db_operations.py   # Contient les fonctions pour interagir avec la base de données
-│   └── main.py            # Fichier principal pour exécuter l'application
-│
-├── tests/                 # Tests du projet
-│   └── test_db_operations.py  # Tests unitaires des opérations de base de données
-│
-├── requirements.txt       # Liste des dépendances du projet
-├── requirements-dev.txt   # Liste des dépendances pour le développement
-└── README.md              # Ce fichier de documentation
-
-Utilisation
-## 1. Créer la base de données
-
-Après avoir installé le projet, tu peux créer la base de données en exécutant le script create_schema.sql pour créer la structure de la base de données.
+1. Créer le schéma de la base
 
 sqlite3 data/hotel_db.sqlite < data/create_schema.sql
 
-##  2. Insérer des données dans la base
-
-Tu peux insérer des données d'exemple dans la base de données en exécutant le script insert_data.sql :
+2. Ajouter les données d’exemple
 
 sqlite3 data/hotel_db.sqlite < data/insert_data.sql
 
-##  3. Utilisation du script Python
+    ❗ Si vous avez des erreurs UNIQUE constraint failed, videz la base ou supprimez hotel_db.sqlite avant de recommencer.
 
-Pour interagir avec la base de données, tu peux utiliser le fichier main.py qui permet de tester les différentes fonctionnalités.
+💻 Lancer le programme
 
-Voici un exemple d'utilisation des fonctions du projet en Python :
+Exécuter le fichier principal Python :
 
 python src/main.py
 
-Tu peux aussi personnaliser ce fichier pour ajouter des fonctionnalités ou des tests supplémentaires.
-##  4. Tests unitaires
+Ce fichier contient des appels de test aux fonctions définies dans db_operations.py.
+✅ Exécuter les tests
 
-Le dossier tests/ contient les tests unitaires pour vérifier les différentes fonctions du projet. Pour exécuter les tests, tu peux utiliser pytest (assure-toi d'avoir installé pytest avec pip install pytest).
+Installez pytest si nécessaire :
+
+pip install pytest
+
+Puis lancez les tests :
 
 pytest tests/test_db_operations.py
 
-Fonctionnement du code
+🧠 Exemples de fonctionnalités Python (extrait)
 
-Le code Python interagit avec la base de données SQLite à travers les fonctions définies dans db_operations.py. Ces fonctions permettent de :
+from db_operations import *
 
-    Créer et gérer des clients
+# Ajouter un client
+ajouter_client("John Doe", "10 rue Alpha", "Casablanca", "20000", "john@email.com", "0600000000")
 
-    Ajouter et consulter des réservations
+# Obtenir toutes les chambres disponibles entre deux dates
+chambres = obtenir_chambres_disponibles("2025-06-01", "2025-06-10")
+for ch in chambres:
+    print(ch)
 
-    Gérer les chambres et leur disponibilité
+🤝 Contribution
 
-    Gérer les prestations et les évaluations des hôtels
+Les contributions sont bienvenues !
+Pour contribuer :
 
-Contribution
+    Fork du projet
 
-Les contributions sont les bienvenues ! Si tu souhaites contribuer à ce projet, voici les étapes à suivre :
+    Créer une branche :
 
-    Fork ce repository.
+git checkout -b feature/nouvelle-fonction
 
-    Crée une branche pour ta fonctionnalité (git checkout -b feature/nom-fonctionnalité).
+Faire vos modifications + tests
 
-    Fais tes modifications et teste-les.
+Pousser vos changements :
 
-    Soumets un Pull Request.
+    git push origin feature/nouvelle-fonction
 
+    Créer une Pull Request sur GitHub
 
+📜 Licence
 
+Projet open-source sous licence MIT.
+🧾 Remerciements
 
+    Professeurs de la FSSM - Université Cadi Ayyad
 
+    Support technique de la communauté open source
 
-    
+    Python & SQLite pour leur puissance et simplicité
+
+ <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7C700&center=true&vCenter=true&width=800&lines=Merci+d%E2%80%99avoir+consult%C3%A9+ce+projet+%F0%9F%92%BC;N'oubliez+pas+de+laisser+une+%E2%AD%90+si+vous+l'avez+aim%C3%A9+!;Suivez-moi+pour+d'autres+projets+!+%F0%9F%91%BB" alt="Typing SVG" />
+</div>
