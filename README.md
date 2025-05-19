@@ -29,11 +29,49 @@ Projet-Bases-de-donnees/
 
 ## ⚙️ Installation et exécution
 
+<<<<<<< HEAD
 ### 1. Cloner le dépôt
 
 ```bash
 git clone git@github.com:medlkhdr/Projet-Bases-de-donn-es.git
 cd Projet-Bases-de-donnees
+=======
+```plaintext
+project_database/
+├── data/                   # Données et scripts SQL
+│   ├── create_schema.sql
+│   ├── hotel_db.sqlite
+│   ├── insert_data.sql
+│   └── queries.sql
+│
+├── env/                    # Environnement virtuel
+│   ├── bin/
+│   ├── etc/
+│   ├── include/
+│   ├── lib/
+│   ├── lib64/
+│   ├── pyvenv.cfg
+│   └── share/
+│
+├── src/                    # Code source
+│   ├── db_operations.py    # Fonctions de base de données
+│   └── main.py             # Point d'entrée principal pour Streamlit
+│
+├── tests/                  # Tests unitaires
+│   ├── __pycache__/        # Cache Python (généré automatiquement)
+│   ├── test_db_operations.py
+│   └── test_main.py        # Tests pour main.py
+│
+├── docs/                   # Documentation du projet (facultatif)
+│   └── user_guide.md       # Exemple de documentation
+│
+├── README.md               # Documentation du projet
+├── requirements.txt        # Dépendances principales
+├── requirements-dev.txt    # Dépendances pour le développement et tests
+└── setup.py                # Fichier de configuration pour installer comme package Python (facultatif)
+
+
+>>>>>>> f4976908a5d9e5be35e1b4bc23d89336d5067c96
 ```
 
 ### 2. Créer un environnement virtuel (optionnel mais recommandé)
