@@ -36,6 +36,15 @@ Ce projet implémente une base de données relationnelle pour la gestion d’un 
 L’objectif est de fournir un outil de gestion complet via **SQLite** et **Python** avec des scripts SQL d’initialisation, insertion et interrogation.
 
 ---
+---
+
+## 🎥 Démonstration Vidéo
+
+Pour voir une démonstration de l’interface du système de gestion d’hôtel, vous pouvez consulter la vidéo ci-dessous :
+
+🔗 **Lien vers la vidéo :** [Cliquez ici pour visionner sur YouTube](https://www.youtube.com/watch?v=TON_LIEN_ICI)  
+
+----
 
 ## ⚙️ Fonctionnalités
 
