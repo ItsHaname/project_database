@@ -24,22 +24,24 @@ Ce projet est une application de gestion d’hôtels. Il est divisé en deux par
 
 ```plaintext
 project_database/
-├── src/                   # Contient le code source Python
-│   ├── app.py             # Application Streamlit
-│   └── database.py        # Fonctions liées à la BDD
+├── src/                     # Contient le code source Python
+│   ├── main.py              # Application Streamlit principale (anciennement `app.py`)
+│   ├── db_operations.py     # Fonctions de gestion de la base de données (anciennement `database.py`)
+│   └── utils.py             # (Optionnel) Fonctions utilitaires, comme la gestion des erreurs ou des requêtes répétitives
 │
-├── data/                  # Contient la base de données et les scripts SQL
-│   ├── hotel_db.sqlite
-│   ├── creation.sql
-│   ├── insertion.sql
-│   └── requetes.sql
+├── data/                    # Contient la base de données et les scripts SQL
+│   ├── hotel_db.sqlite      # Base de données SQLite
+│   ├── create_schema.sql    # Script pour créer les tables de la base de données (anciennement `creation.sql`)
+│   ├── insert_data.sql      # Script pour insérer des données de test dans la base de données (anciennement `insertion.sql`)
+│   └── queries.sql          # Requêtes SQL fréquemment utilisées (anciennement `requetes.sql`)
 │
-├── env/                   # Environnement virtuel (à ne pas pousser sur GitHub)
+├── env/                     # Dossier pour l'environnement virtuel
 │   └── mon_env/
 │
-├── requirements.txt
-├── README.md
-└── .gitignore             # Ajoute ce fichier pour ignorer l'environnement virtuel
+├── requirements.txt         # Liste des dépendances du projet
+├── README.md                # Documentation du projet
+└── .gitignore               # Fichier pour ignorer certains fichiers (comme l'environnement virtuel)
+
 
 ```
 ▶️ Comment exécuter le projet
