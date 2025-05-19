@@ -23,21 +23,24 @@ Ce projet est une application de gestion d’hôtels. Il est divisé en deux par
 ## 📁 Structure du Projet
 
 ```plaintext
-📦 hotel-management-sql-python
+project_database/
+├── src/                   # Contient le code source Python
+│   ├── app.py             # Application Streamlit
+│   └── database.py        # Fonctions liées à la BDD
 │
-├── 📁 sql/
-│   ├── creation_tables.sql          # Script SQL pour créer les tables
-│   └── requetes.sql                 # Requêtes SQL (Partie 1)
+├── data/                  # Contient la base de données et les scripts SQL
+│   ├── hotel_db.sqlite
+│   ├── creation.sql
+│   ├── insertion.sql
+│   └── requetes.sql
 │
-├── 📁 app/
-│   ├── app.py                       # Application Streamlit (Partie 2)
-│   └── database.sqlite              # Base de données SQLite
+├── env/                   # Environnement virtuel (à ne pas pousser sur GitHub)
+│   └── mon_env/
 │
-├── 📁 docs/
-│   └── algèbre_relationnelle.pdf   # Requêtes en algèbre relationnelle
-│
+├── requirements.txt
 ├── README.md
-└── requirements.txt                 # Librairies nécessaires (Python)
+└── .gitignore             # Ajoute ce fichier pour ignorer l'environnement virtuel
+
 ```
 ▶️ Comment exécuter le projet
 Partie 1 : Base de données MySQL
