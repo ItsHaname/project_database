@@ -1,0 +1,17 @@
+# Environnement virtuel
+env/
+
+# Caches Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Base de données (optionnel si tu n’as pas besoin de versionner ta base de données)
+*.sqlite
+
+# Cache Streamlit
+.streamlit/
+
+# Fichiers Jupyter
+.ipynb_checkpoints/
+

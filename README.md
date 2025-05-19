@@ -1,79 +1,126 @@
-# 🏨 Projet de Gestion d'Hôtels en SQL & Python
+# 🏨 Système de Réservation d'Hôtel
 
-## 📚 Description
+Ce projet est une application web de gestion de réservations d’hôtels, développée en **Python** avec **SQLite** pour la base de données et **Streamlit** pour l’interface web. Il permet de :
 
-Ce projet est une application de gestion d’hôtels. Il est divisé en deux parties :
-
-- **Partie 1** : Création et interrogation d'une base de données MySQL basée sur un modèle conceptuel de données (MCD).
-- **Partie 2** : Développement d'une interface web avec **Python**, **SQLite** et **Streamlit** permettant d'interagir avec la base de données (ajout/consultation de clients, réservations, etc.).
-
----
-
-## 🛠 Technologies Utilisées
-
-- **MySQL Workbench** : pour la création et la gestion de la base de données relationnelle.
-- **SQL** : pour écrire les requêtes d'interrogation et de manipulation de données.
-- **SQLite** : une base de données légère utilisée pour l'application web.
-- **Python** : langage de programmation pour le backend de l'application.
-- **Streamlit** : bibliothèque Python pour créer rapidement une interface web.
-- **GitHub** : pour le versionnage et le partage du code.
+- Gérer les **clients**
+- Gérer les **réservations**
+- Consulter les **chambres disponibles**
+- Afficher les **prestations offertes par les hôtels**
+- Visualiser les **évaluations des clients**
 
 ---
 
-## 📁 Structure du Projet
+## 🗂 Structure du projet
 
-```plaintext
-📦 hotel-management-sql-python
+```bash
+Projet-Bases-de-donnees/
 │
-├── 📁 sql/
-│   ├── creation_tables.sql          # Script SQL pour créer les tables
-│   └── requetes.sql                 # Requêtes SQL (Partie 1)
-│
-├── 📁 app/
-│   ├── app.py                       # Application Streamlit (Partie 2)
-│   └── database.sqlite              # Base de données SQLite
-│
-├── 📁 docs/
-│   └── algèbre_relationnelle.pdf   # Requêtes en algèbre relationnelle
-│
-├── README.md
-└── requirements.txt                 # Librairies nécessaires (Python)
+├── app.py                # Application principale Streamlit
+├── creation.sql          # Script de création des tables SQL
+├── insertion.sqlite      # Script d'insertion de données compatible SQLite
+├── requetes.sql          # Requêtes SQL pour afficher les données
+├── database.py           # Module de connexion et exécution des requêtes
+├── hotel_db.sqlite       # Fichier de base de données SQLite
+├── requirements.txt      # Dépendances Python
+└── README.md             # Ce fichier
+````
+
+---
+
+## ⚙️ Installation et exécution
+
+### 1. Cloner le dépôt
+
+```bash
+git clone git@github.com:medlkhdr/Projet-Bases-de-donn-es.git
+cd Projet-Bases-de-donnees
 ```
-▶️ Comment exécuter le projet
-Partie 1 : Base de données MySQL
 
-    Ouvrir MySQL Workbench
+### 2. Créer un environnement virtuel (optionnel mais recommandé)
 
-    Exécuter le script creation_tables.sql pour créer les tables
+```bash
+python -m venv myenv
+source myenv/bin/activate  # Sur Linux/macOS
+myenv\Scripts\activate     # Sur Windows
+```
 
-    Remplir les données à l’aide du fichier annexe fourni
+### 3. Installer les dépendances
 
-    Exécuter les requêtes depuis requetes.sql
-
-Partie 2 : Application Web
-
-    Installer les dépendances :
-
+```bash
 pip install -r requirements.txt
+```
 
-    Lancer l’application :
+### 4. Créer et peupler la base de données (si ce n’est pas encore fait)
 
-streamlit run app/app.py
+```bash
+sqlite3 hotel_db.sqlite < creation.sql
+sqlite3 hotel_db.sqlite < insertion.sql
+```
 
-📽 Démo Vidéo:
+> ⚠️ Le fichier `insertion.sql` est adapté pour SQLite.
 
-🔗 Lien vers la vidéo sur YouTube ou Google Drive
-📌 Auteur
+---
 
-Ce projet a été réalisé dans le cadre d’un cours de base de données relationnelle.
-Étudiante : Hanane AIT BAH
+## 🚀 Lancer l'application
 
+```bash
+streamlit run app.py
+```
 
+Cela ouvrira automatiquement une page web sur `http://localhost:8501` où vous pouvez utiliser l’interface.
 
+---
 
+## 📋 Fonctionnalités de l’application
 
+### 🔍 Visualisation
 
+* Liste des clients
+* Liste des réservations (avec nom du client et ville de l’hôtel)
+* Chambres disponibles entre deux dates
 
+### ➕ Ajout
 
+* Ajouter un nouveau client
+* Ajouter une réservation en sélectionnant un client et des dates
 
+---
+
+## 🧱 Base de données
+
+La base `hotel_db.sqlite` contient les tables suivantes :
+
+* `Hotel`
+* `Client`
+* `Prestation`
+* `Type_Chambre`
+* `Chambre`
+* `Reservation`
+* `Evaluation`
+* `Offre` (association hôtel ↔ prestation)
+* `Concerner` (association réservation ↔ type de chambre)
+
+---
+
+## 🛠 Dépendances principales
+
+* Python 3.x
+* [Streamlit](https://streamlit.io/)
+* SQLite3
+* pandas
+
+---
+
+## 📬 Remarques
+
+* En cas de modification du schéma de base de données, il faudra supprimer le fichier `hotel_db.sqlite` et relancer les scripts `creation.sql` puis `insertion.sql`.
+* Le projet a été développé dans le cadre du TP2 de base de données.
+
+---
+
+## 👨‍💻 Auteurs
+
+* Étudiant : \[MOHAMED LAKHDAR\]
+* Université : \[FSSM   _  UCA ]
+* Cours : Projet de Base de Données
 
