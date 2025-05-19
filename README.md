@@ -174,6 +174,7 @@ Projet open-source sous licence MIT.
 
     Python & SQLite pour leur puissance et simplicité
 
+
  <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7C700&center=true&vCenter=true&width=800&lines=Merci+d%E2%80%99avoir+consult%C3%A9+ce+projet+%F0%9F%92%BC;N'oubliez+pas+de+laisser+une+%E2%AD%90+si+vous+l'avez+aim%C3%A9+!;Suivez-moi+pour+d'autres+projets+!+%F0%9F%91%BB" alt="Typing SVG" />
 </div>
