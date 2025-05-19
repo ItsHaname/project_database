@@ -24,23 +24,37 @@ Ce projet est une application de gestion d’hôtels. Il est divisé en deux par
 
 ```plaintext
 project_database/
-├── src/                     # Contient le code source Python
-│   ├── main.py              # Application Streamlit principale (anciennement `app.py`)
-│   ├── db_operations.py     # Fonctions de gestion de la base de données (anciennement `database.py`)
-│   └── utils.py             # (Optionnel) Fonctions utilitaires, comme la gestion des erreurs ou des requêtes répétitives
+├── data/                   # Données et scripts SQL
+│   ├── create_schema.sql
+│   ├── hotel_db.sqlite
+│   ├── insert_data.sql
+│   └── queries.sql
 │
-├── data/                    # Contient la base de données et les scripts SQL
-│   ├── hotel_db.sqlite      # Base de données SQLite
-│   ├── create_schema.sql    # Script pour créer les tables de la base de données (anciennement `creation.sql`)
-│   ├── insert_data.sql      # Script pour insérer des données de test dans la base de données (anciennement `insertion.sql`)
-│   └── queries.sql          # Requêtes SQL fréquemment utilisées (anciennement `requetes.sql`)
+├── env/                    # Environnement virtuel
+│   ├── bin/
+│   ├── etc/
+│   ├── include/
+│   ├── lib/
+│   ├── lib64/
+│   ├── pyvenv.cfg
+│   └── share/
 │
-├── env/                     # Dossier pour l'environnement virtuel
-│   └── mon_env/
+├── src/                    # Code source
+│   ├── db_operations.py    # Fonctions de base de données
+│   └── main.py             # Point d'entrée principal pour Streamlit
 │
-├── requirements.txt         # Liste des dépendances du projet
-├── README.md                # Documentation du projet
-└── .gitignore               # Fichier pour ignorer certains fichiers (comme l'environnement virtuel)
+├── tests/                  # Tests unitaires
+│   ├── __pycache__/        # Cache Python (généré automatiquement)
+│   ├── test_db_operations.py
+│   └── test_main.py        # Tests pour main.py
+│
+├── docs/                   # Documentation du projet (facultatif)
+│   └── user_guide.md       # Exemple de documentation
+│
+├── README.md               # Documentation du projet
+├── requirements.txt        # Dépendances principales
+├── requirements-dev.txt    # Dépendances pour le développement et tests
+└── setup.py                # Fichier de configuration pour installer comme package Python (facultatif)
 
 
 ```
