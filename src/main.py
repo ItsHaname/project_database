@@ -57,9 +57,11 @@ if menu == "Réservations":
         st.table([{
             "ID": r[0],
             "Client": r[1],
-            "Arrivée": r[2],
-            "Départ": r[3],
-            "Chambre": r[4]
+            "Email": r[2],
+            "Arrivée": r[3],
+            "Départ": r[4],
+            "Ville": r[5],
+            "Pays": r[6]
         } for r in reservations])
     else:
         st.info("Aucune réservation enregistrée.")
@@ -114,13 +116,17 @@ elif menu == "Ajouter un client ou une réservation":
         telephone = st.text_input("Téléphone")
         ville = st.text_input("Ville")
         adresse = st.text_input("Adresse")
+        code_postal = st.text_input("Code postal")
 
         if st.form_submit_button("Enregistrer le client"):
-            if nom and email:
-                ajouter_client(nom, adresse, ville, "", email, telephone)
-                st.success("Client enregistré avec succès.")
+            if nom and email and adresse and ville and code_postal:
+                try:
+                    ajouter_client(nom, adresse, ville, code_postal, email, telephone)
+                    st.success("Client enregistré avec succès.")
+                except Exception as e:
+                    st.error(f"Erreur lors de l'enregistrement : {e}")
             else:
-                st.error("Veuillez remplir au minimum les champs obligatoires.")
+                st.error("Tous les champs sauf le téléphone sont obligatoires.")
 
     st.markdown("---")
     st.header("Ajouter une nouvelle réservation")
@@ -151,5 +157,6 @@ elif menu == "Ajouter un client ou une réservation":
                         chambre_id = chambres[0][0]  # Choix simplifié
                         ajouter_reservation(client_id, str(date_arrivee), str(date_depart), chambre_id)
                         st.success("Réservation enregistrée avec succès.")
+
 st.markdown('</div>', unsafe_allow_html=True)
 
